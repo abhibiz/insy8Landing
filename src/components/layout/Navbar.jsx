@@ -27,7 +27,7 @@ export default function Navbar() {
     : 'border-b border-transparent bg-transparent'
 
   return (
-    <header className="fixed inset-x-0 top-0 z-50">
+    <header className="inset-x-0 top-0 z-50">
       <nav
         aria-label="Primary"
         className={`transition-all duration-300 ${shell}`}

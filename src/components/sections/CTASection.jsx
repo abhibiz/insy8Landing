@@ -18,8 +18,8 @@ export default function CTASection() {
           initial={{ opacity: 0, y: 18 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-80px' }}
-          transition={{ duration: 0.45 }}
-          className="relative overflow-hidden rounded-3xl border border-white/10 bg-[#071028] p-6 shadow-2xl shadow-black/40 ring-1 ring-white/10 backdrop-blur-md sm:p-8 lg:p-10"
+            transition={{ duration: 0.45 }}
+            className="relative overflow-hidden rounded-3xl bg-transparent p-4 sm:p-6"
         >
           <div className="pointer-events-none absolute -left-24 -top-24 h-72 w-72 rounded-full bg-blue-500/20 blur-3xl" />
           <div className="pointer-events-none absolute -bottom-28 -right-24 h-72 w-72 rounded-full bg-purple-500/20 blur-3xl" />
