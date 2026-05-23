@@ -95,8 +95,8 @@ export default function HowItWorks() {
         />
 
         <div className="relative mt-12 lg:mt-16">
-          <div className="flex flex-col items-stretch gap-6 lg:flex-row lg:items-stretch lg:gap-3">
-            <div className="min-w-0 flex-1">
+          <div className="flex flex-col items-stretch gap-6 lg:flex-row lg:gap-3">
+            <div className="min-w-0 lg:flex lg:min-h-0 lg:flex-1 lg:flex-col">
               <FeatureCard
                 number="01"
                 title="Connect your data"
@@ -109,7 +109,7 @@ export default function HowItWorks() {
 
             <StepArrow />
 
-            <div className="min-w-0 flex-1">
+            <div className="min-w-0 lg:flex lg:min-h-0 lg:flex-1 lg:flex-col">
               <FeatureCard
                 number="02"
                 title="Ask questions"
@@ -122,7 +122,7 @@ export default function HowItWorks() {
 
             <StepArrow />
 
-            <div className="min-w-0 flex-1">
+            <div className="min-w-0 lg:flex lg:min-h-0 lg:flex-1 lg:flex-col">
               <FeatureCard
                 number="03"
                 title="Get AI Insights"
