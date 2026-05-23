@@ -57,9 +57,9 @@ export default function FeatureCard({
         </div>
 
         <div
-          className={`mt-6 flex flex-1 items-center justify-center rounded-2xl border bg-white/[0.03] p-4 ${a.border}`}
+          className={`mt-6 flex min-h-[11rem] flex-1 flex-col items-center justify-center rounded-2xl border bg-white/[0.03] p-4 ${a.border}`}
         >
-          {children}
+          <div className="flex w-full items-center justify-center">{children}</div>
         </div>
       </div>
     </motion.article>

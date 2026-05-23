@@ -5,7 +5,7 @@ import FeatureCard from './FeatureCard.jsx'
 
 function ConnectVisual() {
   return (
-    <div className="relative w-full max-w-[260px]">
+    <div className="relative mx-auto w-full max-w-[260px]">
       <div className="mx-auto flex h-28 w-28 items-center justify-center rounded-2xl border border-emerald-500/30 bg-gradient-to-b from-emerald-500/10 to-transparent">
         <Database className="h-10 w-10 text-emerald-200" aria-hidden />
       </div>
@@ -21,7 +21,7 @@ function ConnectVisual() {
 
 function AskVisual() {
   return (
-    <div className="w-full min-w-0 max-w-[280px] space-y-3">
+    <div className="mx-auto w-full min-w-0 max-w-[280px] space-y-3">
       <div className="flex flex-wrap justify-center gap-2">
         <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] text-zinc-300">
           Why did sales drop last month?
@@ -47,7 +47,7 @@ function AskVisual() {
 
 function InsightVisual() {
   return (
-    <div className="grid w-full max-w-[280px] grid-cols-5 gap-2">
+    <div className="mx-auto grid w-full max-w-[280px] grid-cols-5 gap-2">
       <div className="col-span-3 rounded-2xl border border-orange-500/25 bg-gradient-to-b from-orange-500/10 to-transparent p-3">
         <div className="flex h-24 items-end gap-1.5">
           {[32, 52, 40, 60, 44, 72].map((px, i) => (
