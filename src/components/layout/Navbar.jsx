@@ -4,6 +4,24 @@ import { AnimatePresence, motion } from 'framer-motion'
 import Container from '../ui/Container.jsx'
 import Button from '../ui/Button.jsx'
 
+const BIZINTELLIS_URL = 'https://www.bizintellis.com/'
+
+function PoweredByBizintellis({ className = '' }) {
+  return (
+    <p className={`text-xs text-zinc-500 sm:text-[13px] ${className}`}>
+      Powered by{' '}
+      <a
+        href={BIZINTELLIS_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="font-medium text-zinc-300 underline-offset-2 transition hover:text-white hover:underline focus-visible:rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400/80"
+      >
+        Bizintellis
+      </a>
+    </p>
+  )
+}
+
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
@@ -51,7 +69,8 @@ export default function Navbar() {
             </span>
           </a>
 
-          <div className="hidden items-center gap-3 md:flex">
+          <div className="hidden items-center gap-5 md:flex">
+            <PoweredByBizintellis className="whitespace-nowrap" />
             <Button variant="primary" size="md" className="rounded-full px-5">
               Get Started Free
               <MoveRight className="h-4 w-4" aria-hidden />
@@ -83,6 +102,7 @@ export default function Navbar() {
           >
             <div className="mx-auto flex max-w-7xl flex-col gap-3">
               <p className="text-sm text-zinc-500">AI Data Analyst</p>
+              <PoweredByBizintellis />
               <Button
                 variant="primary"
                 size="lg"
