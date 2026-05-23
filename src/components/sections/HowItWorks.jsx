@@ -21,7 +21,7 @@ function ConnectVisual() {
 
 function AskVisual() {
   return (
-    <div className="w-full max-w-[280px] space-y-3">
+    <div className="w-full min-w-0 max-w-[280px] space-y-3">
       <div className="flex flex-wrap justify-center gap-2">
         <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] text-zinc-300">
           Why did sales drop last month?
@@ -33,12 +33,12 @@ function AskVisual() {
           Forecast next quarter
         </span>
       </div>
-      <div className="flex items-center justify-center gap-2">
-        <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-violet-500/30 bg-violet-500/10">
+      <div className="flex min-w-0 items-center justify-center gap-2">
+        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-violet-500/30 bg-violet-500/10">
           <MessageSquare className="h-6 w-6 text-violet-200" aria-hidden />
         </div>
-        <div className="h-10 flex-1 rounded-xl border border-white/10 bg-white/5 px-3 text-xs leading-10 text-zinc-400">
-          Ask anything about your metrics…
+        <div className="flex min-h-12 min-w-0 flex-1 items-center rounded-xl border border-white/10 bg-white/5 px-3 text-xs text-zinc-400">
+          <span className="truncate">Ask anything about your metrics…</span>
         </div>
       </div>
     </div>
