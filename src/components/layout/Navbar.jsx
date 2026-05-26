@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 import Container from '../ui/Container.jsx'
 import Button from '../ui/Button.jsx'
 import { INSY8_APP_URL } from '../../constants/links.js'
+import insy8Logo from '../../assets/images/insy8-logo.svg'
 
 const BIZINTELLIS_URL = 'https://www.bizintellis.com/'
 
@@ -54,19 +55,18 @@ export default function Navbar() {
         <Container className="flex h-16 items-center justify-between gap-4">
           <a
             href="#top"
-            className="group flex items-center gap-3 rounded-lg outline-none focus-visible:ring-2 focus-visible:ring-blue-400/80 focus-visible:ring-offset-2 focus-visible:ring-offset-[#020617]"
+            className="group flex shrink-0 items-center gap-3 rounded-lg outline-none focus-visible:ring-2 focus-visible:ring-blue-400/80 focus-visible:ring-offset-2 focus-visible:ring-offset-[#020617]"
           >
-            <span className="flex items-center gap-2">
-              <span className="text-lg font-semibold tracking-tight text-white sm:text-xl">
-                insy8<span className="text-blue-400">.ai</span>
-              </span>
-              <span
-                className="hidden h-2 w-2 rounded-full bg-blue-400 shadow-[0_0_12px_rgba(96,165,250,0.85)] sm:inline"
-                aria-hidden
-              />
-              <span className="hidden text-sm text-zinc-500 sm:inline sm:text-[13px]">
-                AI Data Analyst
-              </span>
+            <img
+              src={insy8Logo}
+              alt="insy8.ai"
+              width={1408}
+              height={768}
+              decoding="async"
+              className="h-15 w-auto sm:h-16 md:h-13"
+            />
+            <span className="hidden text-sm text-zinc-500 sm:inline sm:text-[13px]">
+              AI Data Analyst
             </span>
           </a>
 
