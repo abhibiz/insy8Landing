@@ -3,6 +3,7 @@ import { Database, MoveRight } from 'lucide-react'
 import { motion, useReducedMotion } from 'framer-motion'
 import Container from '../ui/Container.jsx'
 import Button from '../ui/Button.jsx'
+import { INSY8_APP_URL } from '../../constants/links.js'
 import heroWhite from '../../assets/images/app/white.png'
 import heroDark from '../../assets/images/app/dark.png'
 
@@ -74,11 +75,11 @@ export default function HeroSection() {
             </p>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
-              {/* <Button variant="primary" size="lg" className="rounded-full px-7 shadow-blue-500/30">
+              {/* <Button href={INSY8_APP_URL} variant="primary" size="lg" className="rounded-full px-7 shadow-blue-500/30">
                 Get Started Free
                 <MoveRight className="h-4 w-4" aria-hidden />
               </Button> */}
-              <Button variant="primary" size="lg" className="rounded-full px-7">
+              <Button href={INSY8_APP_URL} variant="primary" size="lg" className="rounded-full px-7">
                 See Demo
                 <MoveRight className="h-4 w-4" aria-hidden />
               </Button>

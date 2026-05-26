@@ -2,6 +2,7 @@ import { Check, Database, MoveRight, Upload } from 'lucide-react'
 import { motion } from 'framer-motion'
 import Container from '../ui/Container.jsx'
 import Button from '../ui/Button.jsx'
+import { INSY8_APP_URL } from '../../constants/links.js'
 
 const bulletsPrimary = ['Secure database connection', 'Setup in under 5 minutes']
 const bulletsSecondary = ['Ask unlimited questions', 'Cancel anytime']
@@ -70,7 +71,7 @@ export default function CTASection() {
               </div>
 
               <div className="mt-8 flex w-full justify-center lg:justify-start">
-                <Button variant="primary" size="lg" className="w-full rounded-full px-7 sm:w-auto">
+                <Button href={INSY8_APP_URL} variant="primary" size="lg" className="w-full rounded-full px-7 sm:w-auto">
                   Get Started Free
                   <MoveRight className="h-4 w-4" aria-hidden />
                 </Button>

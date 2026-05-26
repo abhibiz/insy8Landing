@@ -3,6 +3,7 @@ import { Menu, MoveRight, X } from 'lucide-react'
 import { AnimatePresence, motion } from 'framer-motion'
 import Container from '../ui/Container.jsx'
 import Button from '../ui/Button.jsx'
+import { INSY8_APP_URL } from '../../constants/links.js'
 
 const BIZINTELLIS_URL = 'https://www.bizintellis.com/'
 
@@ -71,7 +72,7 @@ export default function Navbar() {
 
           <div className="hidden items-center gap-5 md:flex">
             <PoweredByBizintellis className="whitespace-nowrap" />
-            <Button variant="primary" size="md" className="rounded-full px-5">
+            <Button href={INSY8_APP_URL} variant="primary" size="md" className="rounded-full px-5">
               Get Started Free
               <MoveRight className="h-4 w-4" aria-hidden />
             </Button>
@@ -104,6 +105,7 @@ export default function Navbar() {
               <p className="text-sm text-zinc-500">AI Data Analyst</p>
               <PoweredByBizintellis />
               <Button
+                href={INSY8_APP_URL}
                 variant="primary"
                 size="lg"
                 className="w-full rounded-full justify-center"
