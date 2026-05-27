@@ -14,11 +14,13 @@ const sizes = {
 }
 
 const MotionButton = motion.button
+const MotionLink = motion.a
 
 export default function Button({
   variant = 'primary',
   size = 'md',
   className = '',
+  href,
   children,
   ...props
 }) {
@@ -29,14 +31,23 @@ export default function Button({
     className,
   ].join(' ')
 
+  const motionProps = {
+    whileHover: { y: -1 },
+    whileTap: { scale: 0.98 },
+    className: classes,
+    ...props,
+  }
+
+  if (href) {
+    return (
+      <MotionLink href={href} target="_blank" rel="noopener noreferrer" {...motionProps}>
+        {children}
+      </MotionLink>
+    )
+  }
+
   return (
-    <MotionButton
-      type="button"
-      whileHover={{ y: -1 }}
-      whileTap={{ scale: 0.98 }}
-      className={classes}
-      {...props}
-    >
+    <MotionButton type="button" {...motionProps}>
       {children}
     </MotionButton>
   )

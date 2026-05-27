@@ -1,8 +1,6 @@
-import Navbar from '../components/layout/Navbar.jsx'
 import Footer from '../components/layout/Footer.jsx'
 import HeroSection from '../components/sections/HeroSection.jsx'
 import HowItWorks from '../components/sections/HowItWorks.jsx'
-import CTASection from '../components/sections/CTASection.jsx'
 
 export default function Home() {
   return (
@@ -15,12 +13,9 @@ export default function Home() {
         <div className="absolute bottom-[-120px] left-1/3 h-96 w-96 rounded-full bg-indigo-600/15 blur-3xl" />
       </div>
 
-      <Navbar />
-
       <main>
         <HeroSection />
         <HowItWorks />
-        <CTASection />
       </main>
 
       <Footer />

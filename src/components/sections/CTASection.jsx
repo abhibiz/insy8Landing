@@ -2,13 +2,10 @@ import { Check, Database, MoveRight, Upload } from 'lucide-react'
 import { motion } from 'framer-motion'
 import Container from '../ui/Container.jsx'
 import Button from '../ui/Button.jsx'
+import { INSY8_APP_URL } from '../../constants/links.js'
 
-const bullets = [
-  'Secure database connection',
-  'Setup in under 5 minutes',
-  'Ask unlimited questions',
-  'Cancel anytime',
-]
+const bulletsPrimary = ['Secure database connection', 'Setup in under 5 minutes']
+const bulletsSecondary = ['Ask unlimited questions', 'Cancel anytime']
 
 export default function CTASection() {
   return (
@@ -18,8 +15,8 @@ export default function CTASection() {
           initial={{ opacity: 0, y: 18 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-80px' }}
-          transition={{ duration: 0.45 }}
-          className="relative overflow-hidden rounded-3xl border border-white/10 bg-[#071028] p-6 shadow-2xl shadow-black/40 ring-1 ring-white/10 backdrop-blur-md sm:p-8 lg:p-10"
+            transition={{ duration: 0.45 }}
+            className="relative overflow-hidden rounded-3xl bg-transparent p-4 sm:p-6"
         >
           <div className="pointer-events-none absolute -left-24 -top-24 h-72 w-72 rounded-full bg-blue-500/20 blur-3xl" />
           <div className="pointer-events-none absolute -bottom-28 -right-24 h-72 w-72 rounded-full bg-purple-500/20 blur-3xl" />
@@ -49,20 +46,32 @@ export default function CTASection() {
               </p>
             </div>
 
-            <div className="lg:col-span-4">
-              <ul className="space-y-3">
-                {bullets.map((item) => (
-                  <li key={item} className="flex items-start gap-3 text-sm text-zinc-200 sm:text-[15px]">
-                    <span className="mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blue-500/15 text-blue-200 ring-1 ring-blue-400/25">
-                      <Check className="h-3.5 w-3.5" aria-hidden />
-                    </span>
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
+            <div className="flex flex-col items-center justify-center lg:col-span-4 lg:items-stretch">
+              <div className="grid w-full max-w-md gap-6 sm:grid-cols-2 sm:items-center sm:justify-items-center lg:mx-0 lg:max-w-none lg:justify-items-stretch">
+                <ul className="space-y-3">
+                  {bulletsPrimary.map((item) => (
+                    <li key={item} className="flex items-start gap-3 text-sm text-zinc-200 sm:text-[15px]">
+                      <span className="mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blue-500/15 text-blue-200 ring-1 ring-blue-400/25">
+                        <Check className="h-3.5 w-3.5" aria-hidden />
+                      </span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+                <ul className="space-y-3">
+                  {bulletsSecondary.map((item) => (
+                    <li key={item} className="flex items-start gap-3 text-sm text-zinc-200 sm:text-[15px]">
+                      <span className="mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-blue-500/15 text-blue-200 ring-1 ring-blue-400/25">
+                        <Check className="h-3.5 w-3.5" aria-hidden />
+                      </span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
 
-              <div className="mt-8">
-                <Button variant="primary" size="lg" className="w-full rounded-full px-7 sm:w-auto">
+              <div className="mt-8 flex w-full justify-center lg:justify-start">
+                <Button href={INSY8_APP_URL} variant="primary" size="lg" className="w-full rounded-full px-7 sm:w-auto">
                   Get Started Free
                   <MoveRight className="h-4 w-4" aria-hidden />
                 </Button>

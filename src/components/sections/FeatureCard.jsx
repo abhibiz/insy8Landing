@@ -37,14 +37,14 @@ export default function FeatureCard({
       viewport={{ once: true, margin: '-80px' }}
       transition={{ duration: 0.45 }}
       whileHover={{ y: -6 }}
-      className={`relative overflow-hidden rounded-3xl border border-white/10 bg-[#071028]/80 p-6 shadow-xl shadow-black/30 ring-1 backdrop-blur-md ${a.ring} ${a.glow}`}
+      className={`relative flex w-full flex-col overflow-hidden rounded-3xl border border-white/10 bg-[#071028]/80 p-6 shadow-xl shadow-black/30 ring-1 backdrop-blur-md lg:h-full ${a.ring} ${a.glow}`}
     >
       <div
         className={`pointer-events-none absolute -right-24 -top-24 h-56 w-56 rounded-full bg-gradient-to-br from-white/10 to-transparent blur-2xl`}
         aria-hidden
       />
-      <div className="relative flex h-full flex-col">
-        <div className="flex items-start justify-between gap-4">
+      <div className="relative flex min-h-0 flex-1 flex-col">
+        <div className="shrink-0">
           <div>
             <p className={`text-5xl font-semibold tabular-nums leading-none ${a.number}`}>
               {number}
@@ -57,9 +57,9 @@ export default function FeatureCard({
         </div>
 
         <div
-          className={`mt-6 flex flex-1 items-center justify-center rounded-2xl border bg-white/[0.03] p-4 ${a.border}`}
+          className={`mt-6 flex min-h-[11rem] flex-1 flex-col items-center justify-center rounded-2xl border bg-white/[0.03] p-4 ${a.border}`}
         >
-          {children}
+          <div className="flex w-full items-center justify-center">{children}</div>
         </div>
       </div>
     </motion.article>

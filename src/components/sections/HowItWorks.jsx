@@ -5,7 +5,7 @@ import FeatureCard from './FeatureCard.jsx'
 
 function ConnectVisual() {
   return (
-    <div className="relative w-full max-w-[260px]">
+    <div className="relative mx-auto w-full max-w-[260px]">
       <div className="mx-auto flex h-28 w-28 items-center justify-center rounded-2xl border border-emerald-500/30 bg-gradient-to-b from-emerald-500/10 to-transparent">
         <Database className="h-10 w-10 text-emerald-200" aria-hidden />
       </div>
@@ -21,7 +21,7 @@ function ConnectVisual() {
 
 function AskVisual() {
   return (
-    <div className="w-full max-w-[280px] space-y-3">
+    <div className="mx-auto w-full min-w-0 max-w-[280px] space-y-3">
       <div className="flex flex-wrap justify-center gap-2">
         <span className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] text-zinc-300">
           Why did sales drop last month?
@@ -33,12 +33,12 @@ function AskVisual() {
           Forecast next quarter
         </span>
       </div>
-      <div className="flex items-center justify-center gap-2">
-        <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-violet-500/30 bg-violet-500/10">
+      <div className="flex min-w-0 items-center justify-center gap-2">
+        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border border-violet-500/30 bg-violet-500/10">
           <MessageSquare className="h-6 w-6 text-violet-200" aria-hidden />
         </div>
-        <div className="h-10 flex-1 rounded-xl border border-white/10 bg-white/5 px-3 text-xs leading-10 text-zinc-400">
-          Ask anything about your metrics…
+        <div className="flex min-h-12 min-w-0 flex-1 items-center rounded-xl border border-white/10 bg-white/5 px-3 text-xs text-zinc-400">
+          <span className="truncate">Ask anything about your metrics…</span>
         </div>
       </div>
     </div>
@@ -47,7 +47,7 @@ function AskVisual() {
 
 function InsightVisual() {
   return (
-    <div className="grid w-full max-w-[280px] grid-cols-5 gap-2">
+    <div className="mx-auto grid w-full max-w-[280px] grid-cols-5 gap-2">
       <div className="col-span-3 rounded-2xl border border-orange-500/25 bg-gradient-to-b from-orange-500/10 to-transparent p-3">
         <div className="flex h-24 items-end gap-1.5">
           {[32, 52, 40, 60, 44, 72].map((px, i) => (
@@ -95,8 +95,8 @@ export default function HowItWorks() {
         />
 
         <div className="relative mt-12 lg:mt-16">
-          <div className="flex flex-col items-stretch gap-6 lg:flex-row lg:items-stretch lg:gap-3">
-            <div className="min-w-0 flex-1">
+          <div className="flex flex-col items-stretch gap-6 lg:flex-row lg:gap-3">
+            <div className="min-w-0 lg:flex lg:min-h-0 lg:flex-1 lg:flex-col">
               <FeatureCard
                 number="01"
                 title="Connect your data"
@@ -109,7 +109,7 @@ export default function HowItWorks() {
 
             <StepArrow />
 
-            <div className="min-w-0 flex-1">
+            <div className="min-w-0 lg:flex lg:min-h-0 lg:flex-1 lg:flex-col">
               <FeatureCard
                 number="02"
                 title="Ask questions"
@@ -122,7 +122,7 @@ export default function HowItWorks() {
 
             <StepArrow />
 
-            <div className="min-w-0 flex-1">
+            <div className="min-w-0 lg:flex lg:min-h-0 lg:flex-1 lg:flex-col">
               <FeatureCard
                 number="03"
                 title="Get AI Insights"
