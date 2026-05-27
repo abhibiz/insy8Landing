@@ -90,7 +90,7 @@ export default function HowItWorks() {
       <Container>
         <SectionHeading
           title="How "
-          highlight="Insy8.ai"
+          highlight="insy8.ai"
           titleSuffix=" Works"
         />
 
@@ -100,7 +100,7 @@ export default function HowItWorks() {
               <FeatureCard
                 number="01"
                 title="Connect your data"
-                description="Securely connect your company database"
+                description="Securely connect databases, spreadsheets, and business systems."
                 accent="green"
               >
                 <ConnectVisual />
@@ -113,7 +113,7 @@ export default function HowItWorks() {
               <FeatureCard
                 number="02"
                 title="Ask questions"
-                description="Ask anything about your business data"
+                description="Ask natural-language questions about your business data."
                 accent="purple"
               >
                 <AskVisual />
@@ -126,7 +126,7 @@ export default function HowItWorks() {
               <FeatureCard
                 number="03"
                 title="Get AI Insights"
-                description="AI analyzes your data and delivers visual insights, predictions, and recommendations."
+                description="Get summaries, charts, trends, predictions, and recommendations."
                 accent="orange"
               >
                 <InsightVisual />

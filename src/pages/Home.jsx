@@ -1,5 +1,6 @@
 import Footer from '../components/layout/Footer.jsx'
 import HeroSection from '../components/sections/HeroSection.jsx'
+import CTASection from '../components/sections/CTASection.jsx'
 import HowItWorks from '../components/sections/HowItWorks.jsx'
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
 
       <main>
         <HeroSection />
+        <CTASection />
         <HowItWorks />
       </main>
 

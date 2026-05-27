@@ -4,8 +4,8 @@ import Container from '../ui/Container.jsx'
 import Button from '../ui/Button.jsx'
 import { INSY8_APP_URL } from '../../constants/links.js'
 
-const bulletsPrimary = ['Secure database connection', 'Setup in under 5 minutes']
-const bulletsSecondary = ['Ask unlimited questions', 'Cancel anytime']
+const bulletsPrimary = ['Market research data', 'Sales and customer data', 'Operational reports', 'Financial and performance data']
+const bulletsSecondary = ['Why did sales drop last month?', 'Which region is underperforming?', 'What are the top drivers of customer satisfaction?', 'Summarize the biggest trends in this dataset.']
 
 export default function CTASection() {
   return (
@@ -15,8 +15,8 @@ export default function CTASection() {
           initial={{ opacity: 0, y: 18 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-80px' }}
-            transition={{ duration: 0.45 }}
-            className="relative overflow-hidden rounded-3xl bg-transparent p-4 sm:p-6"
+          transition={{ duration: 0.45 }}
+          className="relative overflow-hidden rounded-3xl bg-transparent p-4 sm:p-6"
         >
           <div className="pointer-events-none absolute -left-24 -top-24 h-72 w-72 rounded-full bg-blue-500/20 blur-3xl" />
           <div className="pointer-events-none absolute -bottom-28 -right-24 h-72 w-72 rounded-full bg-purple-500/20 blur-3xl" />
@@ -36,10 +36,7 @@ export default function CTASection() {
 
             <div className="lg:col-span-5">
               <h2 className="text-balance text-2xl font-semibold tracking-tight text-white sm:text-3xl">
-                Connect Your Database{' '}
-                <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent">
-                  Start Getting Smarter Today
-                </span>
+                Built for Business Data
               </h2>
               <p className="mt-4 max-w-xl text-pretty text-sm leading-relaxed text-zinc-400 sm:text-base">
                 No data uploads. No manual reports. Just real answers from your data.
@@ -72,7 +69,7 @@ export default function CTASection() {
 
               <div className="mt-8 flex w-full justify-center lg:justify-start">
                 <Button href={INSY8_APP_URL} variant="primary" size="lg" className="w-full rounded-full px-7 sm:w-auto">
-                  Get Started Free
+                  Get Started
                   <MoveRight className="h-4 w-4" aria-hidden />
                 </Button>
               </div>

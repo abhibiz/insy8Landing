@@ -76,24 +76,24 @@ export default function HeroSection() {
             <h1 className="text-balance text-5xl font-semibold tracking-tight text-white sm:text-6xl lg:text-7xl lg:leading-[1.05]">
               <span className="block">Your Data.</span>
               <span className="block">Your Questions.</span>
-              <span className="mt-1 block whitespace-nowrap bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 bg-clip-text text-transparent">
-                AI-Powered Growth.
+              <span className="mt-1 block bg-gradient-to-r from-indigo-600 via-purple-500 to-pink-500 bg-clip-text text-transparent font-bold drop-shadow-[0_0_8px_rgba(0,0,0,0.7)]">
+                AI-Powered Insights.
               </span>
             </h1>
 
             <p className="mt-6 text-pretty text-base leading-relaxed text-zinc-400 sm:text-lg">
-              Insy8.ai connects to your company data, understands your questions, and delivers instant
+              insy8.ai connects to your company data, understands your questions, and delivers instant
               insights with AI-powered intelligence.
             </p>
 
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
               {/* <Button href={INSY8_APP_URL} variant="primary" size="lg" className="rounded-full px-7 shadow-blue-500/30">
-                Get Started Free
+                Get Started
                 <MoveRight className="h-4 w-4" aria-hidden />
               </Button> */}
               <Button href={INSY8_APP_URL} variant="primary" size="lg" className="rounded-full px-7">
-                See Demo
-                <MoveRight className="h-4 w-4" aria-hidden />
+                Explore insy8.ai →
+                {/* <MoveRight className="h-4 w-4" aria-hidden /> */}
               </Button>
             </div>
           </motion.div>
@@ -175,47 +175,47 @@ export default function HeroSection() {
                         transition={{ duration, ease }}
                       />
                       <div className="pointer-events-none absolute inset-0 rounded-[2rem] ring-1 ring-inset ring-white/10" aria-hidden />
-                     
+
                     </motion.button>
                   ) : (
                     <div className="absolute inset-0 overflow-hidden rounded-[2rem] bg-gradient-to-br from-slate-950/95 to-slate-900/90 p-6 sm:p-8">
                       <div className="flex h-full items-center justify-center rounded-[1.75rem] border border-white/10 bg-white/5 p-6 shadow-[0_40px_80px_-50px_rgba(0,0,0,0.8)] backdrop-blur-xl sm:p-8">
                         <div className="w-full max-w-lg space-y-6">
-                        <div className="grid place-items-center gap-5 text-center sm:grid-cols-[auto_minmax(0,1fr)] sm:place-items-start sm:text-left lg:items-center">
-                          <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-3xl bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-500 text-white shadow-lg shadow-blue-500/25">
-                            <Database className="h-8 w-8" aria-hidden />
+                          <div className="grid place-items-center gap-5 text-center sm:grid-cols-[auto_minmax(0,1fr)] sm:place-items-start sm:text-left lg:items-center">
+                            <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-3xl bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-500 text-white shadow-lg shadow-blue-500/25">
+                              <Database className="h-8 w-8" aria-hidden />
+                            </div>
+                            <div>
+                              <p className="text-xs font-semibold uppercase tracking-[0.24em] text-blue-300">
+                                Connect Your Database
+                              </p>
+                              <h3 className="mt-3 text-xl font-semibold text-white sm:text-2xl">
+                                Start Getting Smarter Today
+                              </h3>
+                              <p className="mt-3 text-sm leading-relaxed text-zinc-300 sm:text-base">
+                                No data uploads. No manual reports. Just real answers from your data.
+                              </p>
+                            </div>
                           </div>
-                          <div>
-                            <p className="text-xs font-semibold uppercase tracking-[0.24em] text-blue-300">
-                              Connect Your Database
-                            </p>
-                            <h3 className="mt-3 text-xl font-semibold text-white sm:text-2xl">
-                              Start Getting Smarter Today
-                            </h3>
-                            <p className="mt-3 text-sm leading-relaxed text-zinc-300 sm:text-base">
-                              No data uploads. No manual reports. Just real answers from your data.
-                            </p>
-                          </div>
-                        </div>
 
-                        <div className="grid gap-6 sm:grid-cols-2 sm:items-center sm:justify-items-center lg:justify-items-stretch">
-                          <ul className="space-y-3">
-                            {previewBulletsPrimary.map((item) => (
-                              <li key={item} className="flex items-start gap-3 text-sm leading-relaxed text-zinc-300">
-                                <span className="mt-1 inline-flex h-2.5 w-2.5 shrink-0 rounded-full bg-blue-400" aria-hidden />
-                                <span>{item}</span>
-                              </li>
-                            ))}
-                          </ul>
-                          <ul className="space-y-3">
-                            {previewBulletsSecondary.map((item) => (
-                              <li key={item} className="flex items-start gap-3 text-sm leading-relaxed text-zinc-300">
-                                <span className="mt-1 inline-flex h-2.5 w-2.5 shrink-0 rounded-full bg-blue-400" aria-hidden />
-                                <span>{item}</span>
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
+                          <div className="grid gap-6 sm:grid-cols-2 sm:items-center sm:justify-items-center lg:justify-items-stretch">
+                            <ul className="space-y-3">
+                              {previewBulletsPrimary.map((item) => (
+                                <li key={item} className="flex items-start gap-3 text-sm leading-relaxed text-zinc-300">
+                                  <span className="mt-1 inline-flex h-2.5 w-2.5 shrink-0 rounded-full bg-blue-400" aria-hidden />
+                                  <span>{item}</span>
+                                </li>
+                              ))}
+                            </ul>
+                            <ul className="space-y-3">
+                              {previewBulletsSecondary.map((item) => (
+                                <li key={item} className="flex items-start gap-3 text-sm leading-relaxed text-zinc-300">
+                                  <span className="mt-1 inline-flex h-2.5 w-2.5 shrink-0 rounded-full bg-blue-400" aria-hidden />
+                                  <span>{item}</span>
+                                </li>
+                              ))}
+                            </ul>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -255,9 +255,8 @@ export default function HeroSection() {
                       key={index}
                       type="button"
                       onClick={() => setPreviewSlide(index)}
-                      className={`h-2.5 w-2.5 rounded-full transition-colors ${
-                        index === previewSlide ? 'bg-blue-400' : 'bg-white/20 hover:bg-white/40'
-                      }`}
+                      className={`h-2.5 w-2.5 rounded-full transition-colors ${index === previewSlide ? 'bg-blue-400' : 'bg-white/20 hover:bg-white/40'
+                        }`}
                       aria-label={`Show preview slide ${index + 1}`}
                       aria-pressed={index === previewSlide}
                     />

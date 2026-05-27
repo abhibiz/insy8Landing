@@ -8,11 +8,75 @@ body {
   @apply min-h-screen bg-[#020617] text-zinc-300 antialiased;
 }
 
-/* Subtle grid + noise feel without heavy effects */
-.bg-grid-fine {
-  background-image:
-    linear-gradient(to right, rgb(255 255 255 / 0.04) 1px, transparent 1px),
-    linear-gradient(to bottom, rgb(255 255 255 / 0.04) 1px, transparent 1px);
-  background-size: 64px 64px;
-  mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, black 40%, transparent 100%);
+/* ── Logo dynamic colour animation ───────────────────────────────────────── */
+@keyframes logo-hue-shift {
+  0%   { filter: hue-rotate(0deg)   saturate(1.4) brightness(1.1); }
+  33%  { filter: hue-rotate(120deg) saturate(1.6) brightness(1.15); }
+  66%  { filter: hue-rotate(240deg) saturate(1.5) brightness(1.1); }
+  100% { filter: hue-rotate(360deg) saturate(1.4) brightness(1.1); }
+}
+
+.logo-animate {
+  animation: logo-hue-shift 8s linear infinite;
+  will-change: filter;
+}
+
+/* ── Logo glow & glitter effect ─────────────────────────────────────────────── */
+.logo-wrapper {
+  position: relative;
+  display: inline-block;
+  overflow: visible;
+}
+
+.logo-wrapper img {
+  display: block;
+}
+
+.logo-glow {
+  filter:
+    drop-shadow(0 0 4px rgba(255,255,255,0.4))
+    drop-shadow(0 0 8px rgba(0,255,255,0.3))
+    drop-shadow(0 0 12px rgba(0,200,255,0.2));
+}
+
+
+/* Glitter – moving sparkle */
+.logo-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: -6px; /* extends beyond image */
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.7) 0%, transparent 70%);
+  mix-blend-mode: screen;
+  animation: logo-glitter 2s ease-out infinite;
+  pointer-events: none;
+}
+
+/* ── Logo pulse glow ─────────────────────────────────────────────────────── */
+.logo-pulse {
+  animation: logo-pulse 2s ease-in-out infinite;
+  will-change: box-shadow;
+}
+@keyframes logo-pulse {
+  0%   { box-shadow: 0 0 6px rgba(0,255,255,0.3); }
+  50%  { box-shadow: 0 0 20px rgba(0,255,255,0.6); }
+  100% { box-shadow: 0 0 6px rgba(0,255,255,0.3); }
+}
+
+@keyframes logo-glitter {
+  0%   { transform: translate(0,0) rotate(0deg); opacity: 0; }
+  10%  { opacity: 1; }
+  30%  { transform: translate(4px,-6px) rotate(15deg); }
+  50%  { transform: translate(-3px,5px) rotate(-10deg); }
+  70%  { transform: translate(6px,3px) rotate(8deg); }
+  90%  { opacity: 0; }
+  100% { transform: translate(0,0) rotate(0deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logo-glow,
+  .logo-wrapper::before {
+    animation: none;
+    filter: none;
+  }
 }

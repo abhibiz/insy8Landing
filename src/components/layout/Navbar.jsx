@@ -57,14 +57,18 @@ export default function Navbar() {
             href="#top"
             className="group flex shrink-0 items-center gap-3 rounded-lg outline-none focus-visible:ring-2 focus-visible:ring-blue-400/80 focus-visible:ring-offset-2 focus-visible:ring-offset-[#020617]"
           >
-            <img
-              src={insy8Logo}
-              alt="insy8.ai"
-              width={1408}
-              height={768}
-              decoding="async"
-              className="h-15 w-auto sm:h-16 md:h-13"
-            />
+
+            <div className="logo-wrapper">
+              <img
+                src={insy8Logo}
+                alt="insy8.ai"
+                width={1408}
+                height={768}
+                decoding="async"
+                className="h-15 w-auto sm:h-16 md:h-13 logo-animate logo-glow logo-pulse"
+
+              />
+            </div>
             <span className="hidden text-sm text-zinc-500 sm:inline sm:text-[13px]">
               AI Data Analyst
             </span>
