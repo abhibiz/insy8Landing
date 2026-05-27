@@ -1,4 +1,3 @@
-import Navbar from '../components/layout/Navbar.jsx'
 import Footer from '../components/layout/Footer.jsx'
 import HeroSection from '../components/sections/HeroSection.jsx'
 import HowItWorks from '../components/sections/HowItWorks.jsx'
@@ -13,8 +12,6 @@ export default function Home() {
         <div className="absolute right-[-120px] top-40 h-96 w-96 rounded-full bg-purple-600/20 blur-3xl" />
         <div className="absolute bottom-[-120px] left-1/3 h-96 w-96 rounded-full bg-indigo-600/15 blur-3xl" />
       </div>
-
-      <Navbar />
 
       <main>
         <HeroSection />

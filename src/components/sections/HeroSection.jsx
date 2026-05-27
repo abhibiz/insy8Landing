@@ -4,6 +4,7 @@ import { motion, useReducedMotion } from 'framer-motion'
 import Container from '../ui/Container.jsx'
 import Button from '../ui/Button.jsx'
 import { INSY8_APP_URL } from '../../constants/links.js'
+import insy8Logo from '../../assets/images/insy8-logo.svg'
 import heroWhite from '../../assets/images/app/white.png'
 import heroDark from '../../assets/images/app/dark.png'
 
@@ -52,7 +53,7 @@ export default function HeroSection() {
   }, [reduceMotion])
 
   return (
-    <section id="top" className="relative pt-28 pb-16 sm:pt-32 sm:pb-20 lg:pt-36 lg:pb-24">
+    <section id="top" className="relative pt-16 pb-16 sm:pt-20 sm:pb-20 lg:pt-24 lg:pb-24">
       <Container>
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-10">
           <motion.div
@@ -61,10 +62,21 @@ export default function HeroSection() {
             transition={{ duration: 0.5 }}
             className="max-w-xl"
           >
-            <h1 className="text-balance text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-[3.25rem] lg:leading-[1.05]">
+            <a href="#top" className="mb-6 inline-block rounded-lg outline-none focus-visible:ring-2 focus-visible:ring-blue-400/80">
+              <img
+                src={insy8Logo}
+                alt="insy8.ai"
+                width={1408}
+                height={768}
+                decoding="async"
+                className="h-14 w-auto sm:h-16 md:h-20 lg:h-24"
+              />
+            </a>
+
+            <h1 className="text-balance text-5xl font-semibold tracking-tight text-white sm:text-6xl lg:text-7xl lg:leading-[1.05]">
               <span className="block">Your Data.</span>
               <span className="block">Your Questions.</span>
-              <span className="mt-1 block bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 bg-clip-text text-transparent">
+              <span className="mt-1 block whitespace-nowrap bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 bg-clip-text text-transparent">
                 AI-Powered Growth.
               </span>
             </h1>
