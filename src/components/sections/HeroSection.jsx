@@ -69,7 +69,7 @@ export default function HeroSection() {
                 width={1408}
                 height={768}
                 decoding="async"
-                className="h-14 w-auto sm:h-16 md:h-20 lg:h-24"
+                className="h-10 w-auto sm:h-12 md:h-14 lg:h-16"
               />
             </a>
 
@@ -181,7 +181,7 @@ export default function HeroSection() {
                     <div className="absolute inset-0 overflow-hidden rounded-[2rem] bg-gradient-to-br from-slate-950/95 to-slate-900/90 p-6 sm:p-8">
                       <div className="flex h-full items-center justify-center rounded-[1.75rem] border border-white/10 bg-white/5 p-6 shadow-[0_40px_80px_-50px_rgba(0,0,0,0.8)] backdrop-blur-xl sm:p-8">
                         <div className="w-full max-w-lg space-y-6">
-                          <div className="grid place-items-center gap-5 text-center sm:grid-cols-[auto_minmax(0,1fr)] sm:place-items-start sm:text-left lg:items-center">
+                          <div className="flex flex-col items-center gap-5 text-center">
                             <div className="flex h-20 w-20 shrink-0 items-center justify-center rounded-3xl bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-500 text-white shadow-lg shadow-blue-500/25">
                               <Database className="h-8 w-8" aria-hidden />
                             </div>
@@ -201,17 +201,17 @@ export default function HeroSection() {
                           <div className="grid gap-6 sm:grid-cols-2 sm:items-center sm:justify-items-center lg:justify-items-stretch">
                             <ul className="space-y-3">
                               {previewBulletsPrimary.map((item) => (
-                                <li key={item} className="flex items-start gap-3 text-sm leading-relaxed text-zinc-300">
-                                  <span className="mt-1 inline-flex h-2.5 w-2.5 shrink-0 rounded-full bg-blue-400" aria-hidden />
-                                  <span>{item}</span>
+                                <li key={item} className="flex items-center gap-3 text-sm leading-snug text-zinc-300">
+                                  <span className="inline-flex h-2.5 w-2.5 shrink-0 rounded-full bg-blue-400" aria-hidden />
+                                  <span className="sm:whitespace-nowrap">{item}</span>
                                 </li>
                               ))}
                             </ul>
                             <ul className="space-y-3">
                               {previewBulletsSecondary.map((item) => (
-                                <li key={item} className="flex items-start gap-3 text-sm leading-relaxed text-zinc-300">
-                                  <span className="mt-1 inline-flex h-2.5 w-2.5 shrink-0 rounded-full bg-blue-400" aria-hidden />
-                                  <span>{item}</span>
+                                <li key={item} className="flex items-center gap-3 text-sm leading-snug text-zinc-300">
+                                  <span className="inline-flex h-2.5 w-2.5 shrink-0 rounded-full bg-blue-400" aria-hidden />
+                                  <span className="sm:whitespace-nowrap">{item}</span>
                                 </li>
                               ))}
                             </ul>
