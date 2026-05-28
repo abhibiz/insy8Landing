@@ -53,7 +53,7 @@ export default function HeroSection() {
   }, [reduceMotion])
 
   return (
-    <section id="top" className="relative pt-16 pb-16 sm:pt-20 sm:pb-20 lg:pt-24 lg:pb-24">
+    <section id="top" className="relative pt-6 pb-16 sm:pt-8 sm:pb-20 lg:pt-10 lg:pb-24">
       <Container>
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-10">
           <motion.div
@@ -69,7 +69,7 @@ export default function HeroSection() {
                 width={1408}
                 height={768}
                 decoding="async"
-                className="h-10 w-auto sm:h-12 md:h-14 lg:h-16"
+                className="h-12 w-auto sm:h-16 md:h-20 lg:h-20"
               />
             </a>
 
